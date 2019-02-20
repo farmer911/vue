@@ -44,6 +44,9 @@ export default {
       this.todos = this.todos.filter(todo => todo.id !== id)
     },
     addTodo (newTodo) {
+      if (newTodo.title === '') {
+        return
+      }
       this.todos = [...this.todos, newTodo]
     }
   }
